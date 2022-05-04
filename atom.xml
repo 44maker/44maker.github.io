@@ -6,7 +6,7 @@
   <link href="https://44maker.github.io/atom.xml" rel="self"/>
   
   <link href="https://44maker.github.io/"/>
-  <updated>2022-05-04T14:49:06.130Z</updated>
+  <updated>2022-05-04T11:47:16.404Z</updated>
   <id>https://44maker.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://44maker.github.io/2022/05/04/hello-world/"/>
-    <id>https://44maker.github.io/2022/05/04/hello-world/</id>
-    <published>2022-05-04T14:49:06.130Z</published>
-    <updated>2022-05-04T14:49:06.130Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Solidity学习记录</title>
@@ -113,9 +92,9 @@
     <category term="Java" scheme="https://44maker.github.io/categories/Java/"/>
     
     
-    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
     <category term="Java" scheme="https://44maker.github.io/tags/Java/"/>
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
