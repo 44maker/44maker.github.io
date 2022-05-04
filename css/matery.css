@@ -537,6 +537,7 @@ header .go-back i {
     padding: 0;
     border: 0;
     overflow: hidden;
+    backdrop-filter: blur(6px);
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
