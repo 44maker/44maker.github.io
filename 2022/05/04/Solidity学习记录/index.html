@@ -1,0 +1,1713 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Solidity学习记录, 44maker">
+    <meta name="description" content="2018年起区块链大热，所以喜欢新鲜事物的我向着Web3.0出发！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>Solidity学习记录 | 44maker</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.1.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">44maker</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>档案室</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>娱乐室</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>影视</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/bookmarks">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>画廊</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">44maker</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			档案室
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			娱乐室
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>影视</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/bookmarks " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>画廊</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/44maker" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/44maker" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2022/05/04/OVybl9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Solidity学习记录</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">学习记录</span>
+                            </a>
+                        
+                            <a href="/tags/Solidity/">
+                                <span class="chip bg-color">Solidity</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Solidity/" class="post-category">
+                                Solidity
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-05-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    18 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="在线编译器"><a href="#在线编译器" class="headerlink" title="在线编译器"></a>在线编译器</h1><p><a target="_blank" rel="noopener" href="https://remix.ethereum.org/">Remix</a></p>
+<h1 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h1><p><a target="_blank" rel="noopener" href="https://cryptozombies.io/zh/course/">Cryptozombies</a></p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="第一章-合约"><a href="#第一章-合约" class="headerlink" title="第一章 合约"></a>第一章 合约</h2><p>Solidity 的代码都包裹在<strong>合约</strong>里面。一份<code>合约</code>就是以太应币应用的基本模块，所有的变量和函数都属于一份合约，它是所有应用的起点。</p>
+<p>一份名为<code>HelloWorld</code>的空合约如下：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="版本指令"><a href="#版本指令" class="headerlink" title="版本指令"></a>版本指令</h3><p>所有的 Solidity 源码都必须冠以 “version pragma” — 标明 Solidity 编译器的版本. 以避免将来新的编译器可能破坏你的代码。</p>
+<p>例如:&nbsp;<code>pragma solidity ^0.4.19;</code>&nbsp;(当前 Solidity 的最新版本是 0.8.10).</p>
+<p>综上所述， 下面就是一个最基本的合约 — 每次建立一个新的项目时的第一段代码:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.4.19</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第二章-状态变量和整数"><a href="#第二章-状态变量和整数" class="headerlink" title="第二章 状态变量和整数"></a>第二章 状态变量和整数</h2><p>已经为合约做了一个外壳， 下面学习 Solidity 中如何使用变量。</p>
+<p>状态变量是被永久地保存在合约中。也就是说它们被写入以太币区块链中. 想象成写入一个数据库。</p>
+<p>例子：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 这个无符号整数将会永远的被保存在区块链中</span>
+        <span class="token builtin">uint</span> myUnsignedInteger <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在上面的例子中，定义&nbsp;<code>myUnsignedInteger</code>为&nbsp;<code>uint</code>类型，并赋值100。</p>
+<h3 id="无符号整数-uint"><a href="#无符号整数-uint" class="headerlink" title="无符号整数:&nbsp;uint"></a><strong>无符号整数:&nbsp;<code>uint</code></strong></h3><p><code>uint</code>&nbsp;无符号数据类型， 指<strong>其值不能是负数</strong>，对于有符号的整数存在名为&nbsp;<code>int</code>&nbsp;的数据类型。</p>
+<blockquote>
+<p>注: Solidity中，&nbsp;uint&nbsp;实际上是&nbsp;uint256代名词， 一个256位的无符号整数。你也可以定义位数少的uints —&nbsp;uint8，&nbsp;uint16，&nbsp;uint32， 等…… 但一般来讲你愿意使用简单的&nbsp;uint， 除非在某些特殊情况下，这我们后面会讲。</p>
+</blockquote>
+<h2 id="第三章-数学运算"><a href="#第三章-数学运算" class="headerlink" title="第三章 数学运算"></a>第三章 数学运算</h2><p>在 Solidity 中，数学运算很直观明了，与其它程序设计语言相同:</p>
+<ul>
+<li>加法:&nbsp;<code>x + y</code></li>
+<li>减法:&nbsp;<code>x - y</code>,</li>
+<li>乘法:&nbsp;<code>x * y</code></li>
+<li>除法:&nbsp;<code>x / y</code></li>
+<li>取模 / 求余:&nbsp;<code>x % y</code>&nbsp;<em>(例如,&nbsp;<code>13 % 5</code>&nbsp;余&nbsp;<code>3</code>, 因为13除以5，余3)</em></li>
+</ul>
+<p>Solidity 还支持&nbsp;<em><strong>乘方操作</strong></em>&nbsp;(如：x 的 y次方）和Python中相同 // 例如： 5 ** 2 = 25</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token builtin">uint</span> x <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token comment">// equal to 5^2 = 25</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="第四章-结构体"><a href="#第四章-结构体" class="headerlink" title="第四章 结构体"></a>第四章 结构体</h2><p>有时需要更复杂的数据类型，Solidity 提供了<strong>结构体：</strong></p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">struct</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint</span> age<span class="token punctuation">;</span>
+    <span class="token builtin">string</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结构体允许你生成一个更复杂的数据类型，它有多个属性。</p>
+<blockquote>
+<p>注：我们刚刚引进了一个新类型，string。 字符串用于保存任意长度的 UTF-8 编码数据。 如：&nbsp;string greeting = “Hello world!”。</p>
+</blockquote>
+<h2 id="第五章-数组"><a href="#第五章-数组" class="headerlink" title="第五章 数组"></a>第五章 数组</h2><p>如果你想建立一个集合，可以用&nbsp;<strong>数组</strong> 这样的数据类型. Solidity 支持两种数组:&nbsp;<strong>静态</strong>&nbsp;数组和 <strong>动态</strong>&nbsp;数组:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token comment">// 固定长度为2的静态数组:</span>
+<span class="token builtin">uint</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> fixedArray<span class="token punctuation">;</span>
+<span class="token comment">// 固定长度为5的string类型的静态数组:</span>
+<span class="token builtin">string</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> stringArray<span class="token punctuation">;</span>
+<span class="token comment">// 动态数组，长度不固定，可以动态添加元素:</span>
+<span class="token builtin">uint</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dynamicArray<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>你也可以建立一个&nbsp;**结构体 ****类型的数组 例如，上一章提到的&nbsp;<code>Person</code>:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity">Person<span class="token punctuation">[</span><span class="token punctuation">]</span> people<span class="token punctuation">;</span> <span class="token comment">// 这是动态数组，我们可以不断添加元素</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>记住：状态变量被永久保存在区块链中。所以在你的合约中创建动态数组来保存成结构的数据是非常有意义的。</p>
+<h3 id="公共数组"><a href="#公共数组" class="headerlink" title="公共数组"></a><strong>公共数组</strong></h3><p>你可以定义&nbsp;<code>public</code>&nbsp;数组, Solidity 会自动创建&nbsp;<em><strong>getter</strong></em>&nbsp;方法. 语法如下:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity">Person<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">public</span> people<span class="token punctuation">;</span>  <span class="token comment">//Person是类型 [] 动态数组  public是公共 people是名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>其它的合约可以从这个数组读取数据（但不能写入数据），所以这在合约中是一个有用的保存公共数据的模式。</p>
+<h2 id="第六章-定义函数"><a href="#第六章-定义函数" class="headerlink" title="第六章 定义函数"></a>第六章 定义函数</h2><p>在 Solidity 中函数定义的句法如下:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">function</span> <span class="token function">eatHamburgers</span><span class="token punctuation">(</span><span class="token builtin">string</span> _name<span class="token punctuation">,</span> <span class="token builtin">uint</span> _amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这是一个名为&nbsp;<code>eatHamburgers</code>&nbsp;的函数，它接受两个参数：一个&nbsp;<code>string</code>类型的 和 一个&nbsp;<code>uint</code>类型的。现在函数内部还是空的。</p>
+<blockquote>
+<p>注：: 习惯上函数里的变量都是以(_)开头 (但不是硬性规定) 以区别全局变量。我们整个教程都会沿用这个习惯。</p>
+</blockquote>
+<p>我们的函数定义如下:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token function">eatHamburgers</span><span class="token punctuation">(</span><span class="token string">"vitalik"</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="第七章-使用结构体和数组"><a href="#第七章-使用结构体和数组" class="headerlink" title="第七章 使用结构体和数组"></a>第七章 使用结构体和数组</h2><h3 id="创建新的结构体"><a href="#创建新的结构体" class="headerlink" title="创建新的结构体"></a>创建新的结构体</h3><p>还记得上个例子中的&nbsp;<code>Person</code>&nbsp;结构吗？</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">struct</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">uint</span> age<span class="token punctuation">;</span>
+  <span class="token builtin">string</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Person<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">public</span> people<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>现在我们学习创建新的&nbsp;<code>Person</code>&nbsp;结构，然后把它加入到名为&nbsp;<code>people</code>&nbsp;的数组中.</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token comment">// 创建一个新的Person:</span>
+Person satoshi <span class="token operator">=</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token number">172</span><span class="token punctuation">,</span> <span class="token string">"Satoshi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 将新创建的satoshi添加进people数组:</span>
+people<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>satoshi<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>你也可以两步并一步，用一行代码更简洁:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity">people<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">Person</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">"Vitalik"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>注：array.push()&nbsp;在数组的&nbsp;尾部&nbsp;加入新元素 ，所以元素在数组中的顺序就是我们添加的顺序， 如:</p>
+</blockquote>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token builtin">uint</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">;</span>
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// numbers is now equal to [5, 10, 15]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第八章-私有-x2F-公共函数"><a href="#第八章-私有-x2F-公共函数" class="headerlink" title="第八章 私有 / 公共函数"></a>第八章 私有 / 公共函数</h2><p>Solidity 定义的函数的属性默认为<code>公共</code>。 这就意味着任何一方 (或其它合约) 都可以调用你合约里的函数。</p>
+<p>显然，不是什么时候都需要这样，而且这样的合约易于受到攻击。 所以将自己的函数定义为<code>私有</code>是一个好的编程习惯，只有当你需要外部世界调用它时才将它设置为<code>公共</code>。</p>
+<p>如何定义一个私有的函数呢？</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token builtin">uint</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">_addToArray</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _number<span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token punctuation">{</span>
+  numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这意味着只有我们合约中的其它函数才能够调用这个函数，给&nbsp;<code>numbers</code>&nbsp;数组添加新成员。</p>
+<p>可以看到，在函数名字后面使用关键字&nbsp;<code>private</code>&nbsp;即可。和函数的参数类似，私有函数的名字用(<code>_</code>)起始。</p>
+<p>例子：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">function</span> <span class="token function">_createZombie</span><span class="token punctuation">(</span><span class="token builtin">string</span> _name<span class="token punctuation">,</span> <span class="token builtin">uint</span> _dna<span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token punctuation">{</span>
+zombies<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">Zombie</span><span class="token punctuation">(</span>_name<span class="token punctuation">,</span> _dna<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第九章-函数的更多属性"><a href="#第九章-函数的更多属性" class="headerlink" title="第九章 函数的更多属性"></a>第九章 函数的更多属性</h2><p>本章中我们将学习函数的返回值和修饰符。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a><strong>返回值</strong></h3><p>要想函数返回一个数值，按如下定义：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token builtin">string</span> greeting <span class="token operator">=</span> <span class="token string">"What's up dog"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> greeting<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Solidity 里，函数的定义里可包含返回值的数据类型(如本例中&nbsp;<code>string</code>)。</p>
+<h3 id="函数的修饰符"><a href="#函数的修饰符" class="headerlink" title="函数的修饰符"></a><strong>函数的修饰符</strong></h3><p>上面的函数实际上没有改变 Solidity 里的状态，即，它没有改变任何值或者写任何东西。</p>
+<p>这种情况下我们可以把函数定义为&nbsp;<strong>view</strong>, 意味着它只能读取数据不能更改数据:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Solidity 还支持&nbsp;<strong>pure</strong>&nbsp;函数, 表明这个函数甚至都不访问应用里的数据，例如：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">function</span> <span class="token function">_multiply</span><span class="token punctuation">(</span><span class="token builtin">uint</span> a<span class="token punctuation">,</span> <span class="token builtin">uint</span> b<span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这个函数甚至都不读取应用里的状态 — 它的返回值完全取决于它的输入参数，在这种情况下我们把函数定义为&nbsp;<strong>pure</strong>.</p>
+<blockquote>
+<p>注：可能很难记住何时把函数标记为 pure/view。 幸运的是， Solidity 编辑器会给出提示，提醒你使用这些修饰符。</p>
+</blockquote>
+<h2 id="第十章-Keccak256-和-类型转换"><a href="#第十章-Keccak256-和-类型转换" class="headerlink" title="第十章 Keccak256 和 类型转换"></a>第十章 Keccak256 和 类型转换</h2><p>如何让&nbsp;<code>_generateRandomDna</code>&nbsp;函数返回一个全(半) 随机的&nbsp;<code>uint</code>?</p>
+<p>Ethereum 内部有一个散列函数<code>keccak256</code>，它用了SHA3版本。一个散列函数基本上就是把一个字符串转换为一个256位的16进制数字。字符串的一个微小变化会引起散列数据极大变化。</p>
+<p>这在 Ethereum 中有很多应用，但是现在我们只是用它造一个伪随机数。</p>
+<p>例子:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token comment">//6e91ec6b618bb462a4a6ee5aa2cb0e9cf30f7a052bb467b0ba58b8748c00d2e5</span>
+<span class="token function">keccak256</span><span class="token punctuation">(</span><span class="token string">"aaaab"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//b1f078126895a1424524de5321b339ab00408010b7cf0e6ed451514981e58aa9</span>
+<span class="token function">keccak256</span><span class="token punctuation">(</span><span class="token string">"aaaac"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>显而易见，输入字符串只改变了一个字母，输出就已经天壤之别了。</p>
+<blockquote>
+<p>注: 在区块链中安全地产生一个随机数是一个很难的问题， 本例的方法不安全，但是在我们的样例算法里不是那么重要，已经很好地满足我们的需要了。</p>
+</blockquote>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a><strong>类型转换</strong></h3><p>有时你需要变换数据类型。例如:</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token builtin">uint8</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token builtin">uint</span> b <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token comment">// 将会抛出错误，因为 a * b 返回 uint, 而不是 uint8:</span>
+<span class="token builtin">uint8</span> c <span class="token operator">=</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+<span class="token comment">// 我们需要将 b 转换为 uint8:</span>
+<span class="token builtin">uint8</span> c <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token builtin">uint8</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面,&nbsp;<code>a * b</code>&nbsp;返回类型是&nbsp;<code>uint</code>, 但是当我们尝试用&nbsp;<code>uint8</code>&nbsp;类型接收时, 就会造成潜在的错误。如果把它的数据类型转换为&nbsp;<code>uint8</code>, 就可以了，编译器也不会出错。</p>
+<h2 id="第十一章-事件"><a href="#第十一章-事件" class="headerlink" title="第十一章 事件"></a>第十一章 事件</h2><p>我们的合约几乎就要完成了！让我们加上一个<strong>事件</strong>.</p>
+<p><strong>事件</strong>&nbsp;是合约和区块链通讯的一种机制。你的前端应用“监听”某些事件，并做出反应。</p>
+<p>例子：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token comment">// 这里建立事件</span>
+<span class="token keyword">event</span> <span class="token function">IntegersAdded</span><span class="token punctuation">(</span><span class="token builtin">uint</span> x<span class="token punctuation">,</span> <span class="token builtin">uint</span> y<span class="token punctuation">,</span> <span class="token builtin">uint</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _x<span class="token punctuation">,</span> <span class="token builtin">uint</span> _y<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+  <span class="token builtin">uint</span> result <span class="token operator">=</span> _x <span class="token operator">+</span> _y<span class="token punctuation">;</span>
+<span class="token comment">//触发事件，通知app</span>
+  <span class="token function">IntegersAdded</span><span class="token punctuation">(</span>_x<span class="token punctuation">,</span> _y<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>你的 app 前端可以监听这个事件。JavaScript 实现如下:</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">YourContract<span class="token punctuation">.</span><span class="token function">IntegersAdded</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">// 干些事</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第十二章-映射（Mapping）和地址（Address）"><a href="#第十二章-映射（Mapping）和地址（Address）" class="headerlink" title="第十二章 映射（Mapping）和地址（Address）"></a>第十二章 <strong><strong>映射（Mapping）和地址（Address）</strong></strong></h2><h3 id="Addresses-（地址）"><a href="#Addresses-（地址）" class="headerlink" title="Addresses （地址）"></a><strong>Addresses （地址）</strong></h3><p>以太坊区块链由&nbsp;<strong>account</strong> &nbsp;(账户)组成，你可以把它想象成银行账户。一个帐户的余额是&nbsp;<strong>以太</strong>（在以太坊区块链上使用的币种），你可以和其他帐户之间支付和接受以太币，就像你的银行帐户可以电汇资金到其他银行帐户一样。</p>
+<p>每个帐户都有一个“地址”，你可以把它想象成银行账号。这是账户唯一的标识符，它看起来长这样：</p>
+<p><code>0x0cE446255506E92DF41614C46F1d6df9Cc969183</code></p>
+<p>我们将在后面的课程中介绍地址的细节，现在你只需要了解<strong>地址属于特定用户（或智能合约）的</strong>。</p>
+<h3 id="Mapping（映射）"><a href="#Mapping（映射）" class="headerlink" title="Mapping（映射）"></a><strong>Mapping（映射）</strong></h3><p>在第一章中，我们看到了&nbsp;<strong>结构体</strong> &nbsp;和&nbsp;<strong>数组</strong>&nbsp;。<strong>映射</strong> 是另一种在 Solidity 中存储有组织数据的方法。</p>
+<p>映射是这样定义的：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token comment">//对于金融应用程序，将用户的余额保存在一个 uint类型的变量中：</span>
+<span class="token keyword">mapping</span> <span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token builtin">uint</span><span class="token punctuation">)</span> <span class="token keyword">public</span> accountBalance<span class="token punctuation">;</span>
+<span class="token comment">//或者可以用来通过userId 存储/查找的用户名</span>
+<span class="token keyword">mapping</span> <span class="token punctuation">(</span><span class="token builtin">uint</span> <span class="token operator">=&gt;</span> <span class="token builtin">string</span><span class="token punctuation">)</span> userIdToName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>映射本质上是存储和查找数据所用的键值对。在第一个例子中，键是一个&nbsp;<code>address</code>，值是一个&nbsp;<code>uint</code>，在第二个例子中，键是一个<code>uint</code>，值是一个&nbsp;<code>string</code>。</p>
+<h2 id="第十三章-Msg-sender"><a href="#第十三章-Msg-sender" class="headerlink" title="第十三章 Msg.sender"></a>第十三章 <strong><strong>Msg.sender</strong></strong></h2><p>在 Solidity 中，有一些全局变量可以被所有函数调用。 其中一个就是&nbsp;<code>msg.sender</code>，它指的是当前调用者（或智能合约）的&nbsp;<code>address</code>。</p>
+<blockquote>
+<p>注意：在 Solidity 中，功能执行始终需要从外部调用者开始。 一个合约只会在区块链上什么也不做，除非有人调用其中的函数。所以&nbsp;msg.sender总是存在的。</p>
+</blockquote>
+<p>以下是使用&nbsp;<code>msg.sender</code>&nbsp;来更新&nbsp;<code>mapping</code>&nbsp;的例子：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">mapping</span> <span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token builtin">uint</span><span class="token punctuation">)</span> favoriteNumber<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">setMyNumber</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _myNumber<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+<span class="token comment">// 更新我们的 `favoriteNumber` 映射来将 `_myNumber`存储在 `msg.sender`名下</span>
+  favoriteNumber<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">=</span> _myNumber<span class="token punctuation">;</span>
+<span class="token comment">// 存储数据至映射的方法和将数据存储在数组相似</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">whatIsMyNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">// 拿到存储在调用者地址名下的值// 若调用者还没调用 setMyNumber， 则值为 `0`</span>
+<span class="token keyword">return</span> favoriteNumber<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这个小小的例子中，任何人都可以调用&nbsp;<code>setMyNumber</code>&nbsp;在我们的合约中存下一个&nbsp;<code>uint</code>&nbsp;并且与他们的地址相绑定。 然后，他们调用&nbsp;<code>whatIsMyNumber</code>&nbsp;就会返回他们存储的&nbsp;<code>uint</code> 。</p>
+<p>使用&nbsp;<code>msg.sender</code>&nbsp;很安全，因为它具有以太坊区块链的安全保障 —— 除非窃取与以太坊地址相关联的私钥，否则是没有办法修改其他人的数据的。</p>
+<h2 id="第十四章-Require"><a href="#第十四章-Require" class="headerlink" title="第十四章 Require"></a>第十四章 Require</h2><p><code>require</code>使得函数在执行过程中，当不满足某些条件时抛出错误，并停止执行：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">function</span> <span class="token function">sayHiToVitalik</span><span class="token punctuation">(</span><span class="token builtin">string</span> _name<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">// 比较 _name 是否等于 "Vitalik". 如果不成立，抛出异常并终止程序// (敲黑板: Solidity 并不支持原生的字符串比较, 我们只能通过比较// 两字符串的 keccak256 哈希值来进行判断)</span>
+<span class="token keyword">require</span><span class="token punctuation">(</span><span class="token function">keccak256</span><span class="token punctuation">(</span>_name<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token function">keccak256</span><span class="token punctuation">(</span><span class="token string">"Vitalik"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 如果返回 true, 运行如下语句</span>
+<span class="token keyword">return</span> <span class="token string">"Hi!"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果你这样调用函数&nbsp;<code>sayHiToVitalik（“Vitalik”）</code>&nbsp;,它会返回“Hi！”。而如果调用的时候使用了其他参数，它则会抛出错误并停止执行。</p>
+<p>因此，在调用一个函数之前，用&nbsp;<code>require</code>&nbsp;验证前置条件是非常有必要的。</p>
+<h2 id="第十五章-继承-Inheritance"><a href="#第十五章-继承-Inheritance" class="headerlink" title="第十五章 继承(Inheritance)"></a>第十五章 继承(Inheritance)</h2><p>我们的代码越来越长。 当代码过于冗长的时候，最好将代码和逻辑分拆到多个不同的合约中，以便于管理。</p>
+<p>有个让 Solidity 的代码易于管理的功能，就是合约&nbsp;<em><strong>inheritance</strong></em>&nbsp;(继承)：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">Doge</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">catchphrase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"So Wow CryptoDoge"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">BabyDoge</span> <span class="token keyword">is</span> Doge <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">anotherCatchphrase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"Such Moon BabyDoge"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由于&nbsp;<code>BabyDoge</code>&nbsp;是从&nbsp;<code>Doge</code>&nbsp;那里&nbsp;<em><strong>inherits</strong></em>&nbsp;（继承)过来的。 这意味着当你编译和部署了&nbsp;<code>BabyDoge</code>，它将可以访问&nbsp;<code>catchphrase()</code>&nbsp;和&nbsp;<code>anotherCatchphrase()</code>和其他我们在&nbsp;<code>Doge</code>&nbsp;中定义的其他公共函数。</p>
+<p>这可以用于逻辑继承（比如表达子类的时候，<code>Cat</code>&nbsp;是一种&nbsp;<code>Animal</code>）。 但也可以简单地将类似的逻辑组合到不同的合约中以组织代码。</p>
+<h2 id="第十六章-导入-Import"><a href="#第十六章-导入-Import" class="headerlink" title="第十六章 导入(Import)"></a>第十六章 导入(Import)</h2><p>代码已经够长了，我们把它分成多个文件以便于管理。 通常情况下，当 Solidity 项目中的代码太长的时候我们就是这么做的。</p>
+<p>在 Solidity 中，当你有多个文件并且想把一个文件导入另一个文件时，可以使用&nbsp;<code>import</code>&nbsp;语句：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">import</span> <span class="token string">"./someothercontract.sol"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">newContract</span> <span class="token keyword">is</span> SomeOtherContract <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样当我们在合约（contract）目录下有一个名为&nbsp;<code>someothercontract.sol</code>&nbsp;的文件（&nbsp;<code>./</code>&nbsp;就是同一目录的意思），它就会被编译器导入。</p>
+<h2 id="第十七章-Storage与Memory"><a href="#第十七章-Storage与Memory" class="headerlink" title="第十七章 Storage与Memory"></a>第十七章 <strong><strong>Storage与Memory</strong></strong></h2><p>在 Solidity 中，有两个地方可以存储变量 ——&nbsp;<code>storage</code>&nbsp;或&nbsp;<code>memory</code>。</p>
+<p><em><strong>Storage</strong></em>&nbsp;变量是指永久存储在区块链中的变量。&nbsp;<em><strong>Memory</strong></em>&nbsp;变量则是临时的，当外部函数对某合约调用完成时，内存型变量即被移除。 你可以把它想象成存储在你电脑的硬盘或是RAM中数据的关系。</p>
+<p>大多数时候你都用不到这些关键字，默认情况下 Solidity 会自动处理它们。 状态变量（在函数之外声明的变量）默认为“存储”形式，并永久写入区块链；而在函数内部声明的变量是“内存”型的，它们函数调用结束后消失。</p>
+<p>然而也有一些情况下，你需要手动声明存储类型，主要用于处理函数内的&nbsp; <strong>结构体</strong> &nbsp;和&nbsp; <strong>数组</strong> 时：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">SandwichFactory</span> <span class="token punctuation">{</span>
+  <span class="token keyword">struct</span> <span class="token class-name">Sandwich</span> <span class="token punctuation">{</span>
+    <span class="token builtin">string</span> name<span class="token punctuation">;</span>
+    <span class="token builtin">string</span> status<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  Sandwich<span class="token punctuation">[</span><span class="token punctuation">]</span> sandwiches<span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">eatSandwich</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _index<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+<span class="token comment">// Sandwich mySandwich = sandwiches[_index];// ^ 看上去很直接，不过 Solidity 将会给出警告// 告诉你应该明确在这里定义 `storage` 或者 `memory`。// 所以你应该明确定义 `storage`:</span>
+    Sandwich <span class="token keyword">storage</span> mySandwich <span class="token operator">=</span> sandwiches<span class="token punctuation">[</span>_index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// ...这样 `mySandwich` 是指向 `sandwiches[_index]`的指针// 在存储里，另外...</span>
+    mySandwich<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token string">"Eaten!"</span><span class="token punctuation">;</span>
+<span class="token comment">// ...这将永久把 `sandwiches[_index]` 变为区块链上的存储// 如果你只想要一个副本，可以使用`memory`:</span>
+    Sandwich <span class="token keyword">memory</span> anotherSandwich <span class="token operator">=</span> sandwiches<span class="token punctuation">[</span>_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// ...这样 `anotherSandwich` 就仅仅是一个内存里的副本了// 另外</span>
+    anotherSandwich<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token string">"Eaten!"</span><span class="token punctuation">;</span>
+<span class="token comment">// ...将仅仅修改临时变量，对 `sandwiches[_index + 1]` 没有任何影响// 不过你可以这样做:</span>
+    sandwiches<span class="token punctuation">[</span>_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> anotherSandwich<span class="token punctuation">;</span>
+<span class="token comment">// ...如果你想把副本的改动保存回区块链存储</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果你还没有完全理解究竟应该使用哪一个，也不用担心 —— 在本教程中，我们将告诉你何时使用&nbsp;<code>storage</code>&nbsp;或是&nbsp;<code>memory</code>，并且当你不得不使用到这些关键字的时候，Solidity 编译器也发警示提醒你的。</p>
+<p>现在，只要知道在某些场合下也需要你显式地声明&nbsp;<code>storage</code>&nbsp;或&nbsp;<code>memory</code>就够了！</p>
+<h2 id="第十八章-更多关于函数可见性"><a href="#第十八章-更多关于函数可见性" class="headerlink" title="第十八章 更多关于函数可见性"></a>第十八章 <strong><strong>更多关于函数可见性</strong></strong></h2><h3 id="internal-和-external"><a href="#internal-和-external" class="headerlink" title="internal 和 external"></a><strong>internal 和 external</strong></h3><p>除&nbsp;<code>public</code>&nbsp;和&nbsp;<code>private</code>&nbsp;属性之外，Solidity 还使用了另外两个描述函数可见性的修饰词：<code>internal</code>（内部） 和&nbsp;<code>external</code>（外部）。</p>
+<p><code>internal</code>&nbsp;和&nbsp;<code>private</code>&nbsp;类似，不过， 如果某个合约继承自其父合约，这个合约即可以访问父合约中定义的“内部”函数。（嘿，这听起来正是我们想要的那样！）。</p>
+<p><code>external</code>&nbsp;与<code>public</code>&nbsp;类似，只不过这些函数只能在合约之外调用 - 它们不能被合约内的其他函数调用。稍后我们将讨论什么时候使用&nbsp;<code>external</code>&nbsp;和&nbsp;<code>public</code>。</p>
+<p>声明函数&nbsp;<code>internal</code>&nbsp;或&nbsp;<code>external</code>&nbsp;类型的语法，与声明&nbsp;<code>private</code>&nbsp;和&nbsp;<code>public</code>类 型相同：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">Sandwich</span> <span class="token punctuation">{</span>
+  <span class="token builtin">uint</span> <span class="token keyword">private</span> sandwichesEaten <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">internal</span> <span class="token punctuation">{</span>
+    sandwichesEaten<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">BLT</span> <span class="token keyword">is</span> Sandwich <span class="token punctuation">{</span>
+  <span class="token builtin">uint</span> <span class="token keyword">private</span> baconSandwichesEaten <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">eatWithBacon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    baconSandwichesEaten<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token comment">// 因为eat() 是internal 的，所以我们能在这里调用</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第十九章-与其他合约的交互"><a href="#第十九章-与其他合约的交互" class="headerlink" title="第十九章 与其他合约的交互"></a>第十九章 <strong>与其他合约的交互</strong></h2><p>如果我们的合约需要和区块链上的其他的合约会话，则需先定义一个&nbsp;<em><strong>interface</strong></em>&nbsp;(接口)。</p>
+<p>先举一个简单的栗子。 假设在区块链上有这么一个合约：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">LuckyNumber</span> <span class="token punctuation">{</span>
+  <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token builtin">uint</span><span class="token punctuation">)</span> numbers<span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">setNum</span><span class="token punctuation">(</span><span class="token builtin">uint</span> _num<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+    numbers<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">=</span> _num<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token builtin">address</span> _myAddress<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> numbers<span class="token punctuation">[</span>_myAddress<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这是个很简单的合约，您可以用它存储自己的幸运号码，并将其与您的以太坊地址关联。 这样其他人就可以通过您的地址查找您的幸运号码了。</p>
+<p>现在假设我们有一个外部合约，使用&nbsp;<code>getNum</code>&nbsp;函数可读取其中的数据。</p>
+<p>首先，我们定义&nbsp;<code>LuckyNumber</code>&nbsp;合约的&nbsp;<em><strong>interface</strong></em>&nbsp;：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">NumberInterface</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token builtin">address</span> _myAddress<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>请注意，这个过程虽然看起来像在定义一个合约，但其实内里不同：</p>
+<p>首先，我们只声明了要与之交互的函数 —— 在本例中为&nbsp;<code>getNum</code>&nbsp;—— 在其中我们没有使用到任何其他的函数或状态变量。</p>
+<p>其次，我们并没有使用大括号（<code>{</code>&nbsp;和&nbsp;<code>}</code>）定义函数体，我们单单用分号（<code>;</code>）结束了函数声明。这使它看起来像一个合约框架。</p>
+<p>编译器就是靠这些特征认出它是一个接口的。</p>
+<p>在我们的 app 代码中使用这个接口，合约就知道其他合约的函数是怎样的，应该如何调用，以及可期待什么类型的返回值。</p>
+<p>在下一章中，我们将真正调用其他合约的函数。目前我们只要声明一个接口，用于调用 CryptoKitties 合约就行了。</p>
+<h2 id="第二十章-使用接口"><a href="#第二十章-使用接口" class="headerlink" title="第二十章 使用接口"></a>第二十章 使用接口</h2><p>继续前面&nbsp;<code>NumberInterface</code>&nbsp;的例子，我们既然将接口定义为：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">NumberInterface</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token builtin">address</span> _myAddress<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>我们可以在合约中这样使用：</p>
+<pre class="line-numbers language-solidity" data-language="solidity"><code class="language-solidity"><span class="token keyword">contract</span> <span class="token class-name">MyContract</span> <span class="token punctuation">{</span>
+  <span class="token builtin">address</span> NumberInterfaceAddress <span class="token operator">=</span> <span class="token number">0xab38</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+<span class="token comment">// ^ 这是FavoriteNumber合约在以太坊上的地址</span>
+  NumberInterface numberContract <span class="token operator">=</span> <span class="token function">NumberInterface</span><span class="token punctuation">(</span>NumberInterfaceAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 现在变量 `numberContract` 指向另一个合约对象</span>
+<span class="token keyword">function</span> <span class="token function">someFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+<span class="token comment">// 现在我们可以调用在那个合约中声明的 `getNum`函数:</span>
+  <span class="token builtin">uint</span> num <span class="token operator">=</span> numberContract<span class="token punctuation">.</span><span class="token function">getNum</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ...在这儿使用 `num`变量做些什么</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>通过这种方式，只要将您合约的可见性设置为<code>public</code>(公共)或<code>external</code>(外部)，它们就可以与以太坊区块链上的任何其他合约进行交互。</p>
+<h2 id="第二十一章-处理多返回值"><a href="#第二十一章-处理多返回值" class="headerlink" title="第二十一章 处理多返回值"></a><strong>第二十一章 处理多返回值</strong></h2><p>…更新中</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">44maker</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://44maker.github.io/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">https://44maker.github.io/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">44maker</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">学习记录</span>
+                                </a>
+                            
+                                <a href="/tags/Solidity/">
+                                    <span class="chip bg-color">Solidity</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/05/04/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            44maker
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/03/Mysql%E5%AE%89%E8%A3%85/">
+                    <div class="card-image">
+                        
+                        <img src="https://s1.ax1x.com/2022/05/04/OVe8XV.png" class="responsive-img" alt="Mysql安装">
+                        
+                        <span class="card-title">Mysql安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            记录一下Mysql安装过程，为以后更换不同电脑做准备hh
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Mysql/" class="post-category">
+                                    Mysql
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">环境配置</span>
+                    </a>
+                    
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 44maker<br />'
+            + '文章作者: 44maker<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+            
+
+                <div class="container row center-align"
+                    style="margin-bottom: 0px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        
+                                <span id="year">
+                                    2022
+                                </span>
+                                
+                                    <a href="/about" target="_blank">
+                                        44maker
+                                    </a>
+                                    |&nbsp;Created by&nbsp;<a href="https://44maker.github.io/"
+                                        target="_blank">44maker</a>
+                                    <br>
+                                    
+                                                
+                                                    
+                                                        
+                                                            
+                                                                
+                                                                    <span id="busuanzi_container_site_pv">
+                                                                        &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                                                                            <span id="busuanzi_value_site_pv"
+                                                                                class="white-color"></span>
+                                                                    </span>
+                                                                    
+                                                                        
+                                                                            <span id="busuanzi_container_site_uv">
+                                                                                &nbsp;|&nbsp;<i
+                                                                                    class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                                                                                    <span id="busuanzi_value_site_uv"
+                                                                                        class="white-color"></span>
+                                                                            </span>
+                                                                            
+                                                                                <br>
+
+                                                                                <!-- 运行天数提醒. -->
+                                                                                
+                                                                                        <br>
+                                                                                        
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
+    <a href="https://github.com/44maker" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:cai_derozan@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2821452803" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2821452803" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                    </div>
+                </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

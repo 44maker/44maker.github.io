@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>44maker</title>
+  
+  <subtitle>彼岸与远方</subtitle>
+  <link href="https://44maker.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://44maker.github.io/"/>
+  <updated>2022-05-04T14:49:06.130Z</updated>
+  <id>https://44maker.github.io/</id>
+  
+  <author>
+    <name>44maker</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://44maker.github.io/2022/05/04/hello-world/"/>
+    <id>https://44maker.github.io/2022/05/04/hello-world/</id>
+    <published>2022-05-04T14:49:06.130Z</published>
+    <updated>2022-05-04T14:49:06.130Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity学习记录</title>
+    <link href="https://44maker.github.io/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>https://44maker.github.io/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2022-05-04T11:28:22.000Z</published>
+    <updated>2022-05-04T11:47:16.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在线编译器&quot;&gt;&lt;a href=&quot;#在线编译器&quot; class=&quot;headerlink&quot; title=&quot;在线编译器&quot;&gt;&lt;/a&gt;在线编译器&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://remix.ethereum.org/&quot;&gt;Remix&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="Solidity" scheme="https://44maker.github.io/categories/Solidity/"/>
+    
+    
+    <category term="学习记录" scheme="https://44maker.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="Solidity" scheme="https://44maker.github.io/tags/Solidity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql安装</title>
+    <link href="https://44maker.github.io/2022/05/03/Mysql%E5%AE%89%E8%A3%85/"/>
+    <id>https://44maker.github.io/2022/05/03/Mysql%E5%AE%89%E8%A3%85/</id>
+    <published>2022-05-03T15:06:00.000Z</published>
+    <updated>2022-05-04T11:43:19.531Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Mysql安装&quot;&gt;&lt;a href=&quot;#Mysql安装&quot; class=&quot;headerlink&quot; title=&quot;Mysql安装&quot;&gt;&lt;/a&gt;Mysql安装&lt;/h1&gt;&lt;h3 id=&quot;安装MySQL&quot;&gt;&lt;a href=&quot;#安装MySQL&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Mysql" scheme="https://44maker.github.io/categories/Mysql/"/>
+    
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Mysql" scheme="https://44maker.github.io/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java环境配置</title>
+    <link href="https://44maker.github.io/2022/05/03/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://44maker.github.io/2022/05/03/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2022-05-03T14:35:00.000Z</published>
+    <updated>2022-05-04T10:38:44.755Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Windows&quot;&gt;&lt;a href=&quot;#Windows&quot; class=&quot;headerlink&quot; title=&quot;Windows&quot;&gt;&lt;/a&gt;Windows&lt;/h3&gt;&lt;p&gt;首先下载&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://44maker.github.io/categories/Java/"/>
+    
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Java" scheme="https://44maker.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kali换源</title>
+    <link href="https://44maker.github.io/2022/05/03/Kali%E6%8D%A2%E6%BA%90/"/>
+    <id>https://44maker.github.io/2022/05/03/Kali%E6%8D%A2%E6%BA%90/</id>
+    <published>2022-05-03T11:06:00.000Z</published>
+    <updated>2022-05-04T10:24:26.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.kali.org/&quot;&gt;Kali&amp;nbsp;&lt;/a&gt;的更新源是在国外的，所以在更新的的话许多的小伙伴都会更不了，今天我来教大家怎样更换国内镜像源&lt;/p&gt;
+&lt;p&gt;进入终端，输入下列代码&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="Kali" scheme="https://44maker.github.io/categories/Kali/"/>
+    
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Kali" scheme="https://44maker.github.io/tags/Kali/"/>
+    
+  </entry>
+  
+</feed>
