@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Kali Alfa 网卡驱动安装</title>
+      <link href="/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/"/>
+      <url>/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Kali-Alfa-网卡驱动安装"><a href="#Kali-Alfa-网卡驱动安装" class="headerlink" title="Kali Alfa 网卡驱动安装"></a><strong>Kali Alfa 网卡驱动安装</strong></h1><p>我使用的网卡是ALFA的AWUS036ACH</p><p>默认Kali是不支持的，需要安装驱动</p><p>首先进入终端更新一下</p><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt updatesudo apt upgrade <span class="token operator">-</span>ysudo apt dist-upgrade <span class="token operator">-</span>ysudo reboot now<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>然后开始安装驱动</p><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt install realtek-rtl88xxau-dkmssudo apt install dkmsgit clone <span class="token punctuation">[</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com/aircrack-ng/rtl8812au&gt;<span class="token punctuation">]</span><span class="token punctuation">(</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>youtube<span class="token punctuation">.</span>com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGZ6ZU5wMy1uZlQtVElJMVZJT3ozZEJ2a3ctQXxBQ3Jtc0tuNWloV1dPVVJ6bEdqSFdfd2V1c2hwMVl5UnZlR2p1TXhycVl1WW1sZ1NXbVl5UjN1UFhoY0ZuVTdFdXFfanBSUk5UaHNNNXZsQ0Fwcm5vRzRuaXlIOGZyMy1Tb1pKZV9aVU9qOU1xWlRGbExTOFF3bw&amp;q=https%3A%2F%2Fgithub<span class="token punctuation">.</span>com%2Faircrack-ng%2Frtl8812au&amp;v=hEXwOkyYNL0&gt;<span class="token punctuation">)</span>cd rtl8812au/makesudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>检查一下</p><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">lsusbiwconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>完成之后测试一下</p><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo wifite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 环境配置 </tag>
+            
+            <tag> Kali </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Solidity学习记录</title>
       <link href="/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
       <url>/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
@@ -47,9 +68,9 @@
       
         <tags>
             
-            <tag> 环境配置 </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> 环境配置 </tag>
             
         </tags>
       
@@ -74,9 +95,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 环境配置 </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       

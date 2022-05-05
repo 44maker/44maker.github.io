@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: Java, 44maker">
-    <meta name="description" content="44maker">
+    <meta name="keywords" content="Kali Alfa 网卡驱动安装, 44maker">
+    <meta name="description" content="有些外置网卡kali是不能即插即用的，所以需要安装驱动">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>分类: Java | 44maker</title>
+    <title>Kali Alfa 网卡驱动安装 | 44maker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -371,164 +371,528 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                彼岸与远方
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.bmp.ovh/imgs/2022/05/04/12dfdcb7b04426d3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Kali Alfa 网卡驱动安装</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="container content">
 
     
-
-<div id="category-cloud" class="container chip-container">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/Mysql/" title="Mysql: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">Mysql
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Kali/" title="Kali: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Kali
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #D5F5E3;">Java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Solidity/" title="Solidity: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">Solidity
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/03/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://s1.ax1x.com/2022/05/04/OVU4o9.jpg" class="responsive-img" alt="Java环境配置">
-                            
-                            <span class="card-title">Java环境配置</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                换电脑时，配置新的编程环境，所以在此记录一下Java的配置过程
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
                     
-                    <div class="card-action article-tags">
+                    <div class="article-tag">
                         
-                        <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                            <span class="chip bg-color">环境配置</span>
-                        </a>
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">环境配置</span>
+                            </a>
                         
-                        <a href="/tags/Java/">
-                            <span class="chip bg-color">Java</span>
-                        </a>
+                            <a href="/tags/Kali/">
+                                <span class="chip bg-color">Kali</span>
+                            </a>
                         
                     </div>
                     
                 </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-05
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-05-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    131
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Kali-Alfa-网卡驱动安装"><a href="#Kali-Alfa-网卡驱动安装" class="headerlink" title="Kali Alfa 网卡驱动安装"></a><strong>Kali Alfa 网卡驱动安装</strong></h1><p>我使用的网卡是ALFA的AWUS036ACH</p>
+<p>默认Kali是不支持的，需要安装驱动</p>
+<p>首先进入终端更新一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt update
+sudo apt upgrade <span class="token operator">-</span>y
+sudo apt dist-upgrade <span class="token operator">-</span>y
+sudo reboot now<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后开始安装驱动</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt install realtek-rtl88xxau-dkms
+sudo apt install dkms
+git clone <span class="token punctuation">[</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com/aircrack-ng/rtl8812au&gt;<span class="token punctuation">]</span><span class="token punctuation">(</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>youtube<span class="token punctuation">.</span>com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGZ6ZU5wMy1uZlQtVElJMVZJT3ozZEJ2a3ctQXxBQ3Jtc0tuNWloV1dPVVJ6bEdqSFdfd2V1c2hwMVl5UnZlR2p1TXhycVl1WW1sZ1NXbVl5UjN1UFhoY0ZuVTdFdXFfanBSUk5UaHNNNXZsQ0Fwcm5vRzRuaXlIOGZyMy1Tb1pKZV9aVU9qOU1xWlRGbExTOFF3bw&amp;q=https%3A%2F%2Fgithub<span class="token punctuation">.</span>com%2Faircrack-ng%2Frtl8812au&amp;v=hEXwOkyYNL0&gt;<span class="token punctuation">)</span>
+cd rtl8812au/
+make
+sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>检查一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">lsusb
+iwconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>完成之后测试一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo wifite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">44maker</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/">https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">44maker</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
+                                <a href="/tags/Kali/">
+                                    <span class="chip bg-color">Kali</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
             </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
         </div>
-    </article>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/">
+                    <div class="card-image">
+                        
+                        <img src="https://s3.bmp.ovh/imgs/2022/05/04/12dfdcb7b04426d3.jpg" class="responsive-img" alt="Kali Alfa 网卡驱动安装">
+                        
+                        <span class="card-title">Kali Alfa 网卡驱动安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            有些外置网卡kali是不能即插即用的，所以需要安装驱动
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            44maker
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">环境配置</span>
+                    </a>
+                    
+                    <a href="/tags/Kali/">
+                        <span class="chip bg-color">Kali</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/04/Solidity%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                    <div class="card-image">
+                        
+                        <img src="https://s1.ax1x.com/2022/05/04/OVybl9.jpg" class="responsive-img" alt="Solidity学习记录">
+                        
+                        <span class="card-title">Solidity学习记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2018年起区块链大热，所以喜欢新鲜事物的我向着Web3.0出发！
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Solidity/" class="post-category">
+                                    Solidity
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">学习记录</span>
+                    </a>
+                    
+                    <a href="/tags/Solidity/">
+                        <span class="chip bg-color">Solidity</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 44maker<br />'
+            + '文章作者: 44maker<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    
+
 </main>
 
 

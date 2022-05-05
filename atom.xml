@@ -6,7 +6,7 @@
   <link href="https://44maker.github.io/atom.xml" rel="self"/>
   
   <link href="https://44maker.github.io/"/>
-  <updated>2022-05-04T11:47:16.404Z</updated>
+  <updated>2022-05-05T02:21:08.798Z</updated>
   <id>https://44maker.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kali Alfa 网卡驱动安装</title>
+    <link href="https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/"/>
+    <id>https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/</id>
+    <published>2022-05-05T02:14:06.000Z</published>
+    <updated>2022-05-05T02:21:08.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Kali-Alfa-网卡驱动安装&quot;&gt;&lt;a href=&quot;#Kali-Alfa-网卡驱动安装&quot; class=&quot;headerlink&quot; title=&quot;Kali Alfa 网卡驱动安装&quot;&gt;&lt;/a&gt;&lt;strong&gt;Kali Alfa</summary>
+        
+      
+    
+    
+    
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Kali" scheme="https://44maker.github.io/tags/Kali/"/>
+    
+  </entry>
   
   <entry>
     <title>Solidity学习记录</title>
@@ -65,9 +90,9 @@
     <category term="Mysql" scheme="https://44maker.github.io/categories/Mysql/"/>
     
     
-    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
     <category term="Mysql" scheme="https://44maker.github.io/tags/Mysql/"/>
+    
+    <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -92,9 +117,9 @@
     <category term="Java" scheme="https://44maker.github.io/categories/Java/"/>
     
     
-    <category term="Java" scheme="https://44maker.github.io/tags/Java/"/>
-    
     <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Java" scheme="https://44maker.github.io/tags/Java/"/>
     
   </entry>
   
@@ -103,7 +128,7 @@
     <link href="https://44maker.github.io/2022/05/03/Kali%E6%8D%A2%E6%BA%90/"/>
     <id>https://44maker.github.io/2022/05/03/Kali%E6%8D%A2%E6%BA%90/</id>
     <published>2022-05-03T11:06:00.000Z</published>
-    <updated>2022-05-04T10:24:26.708Z</updated>
+    <updated>2022-05-05T02:21:12.720Z</updated>
     
     
       
