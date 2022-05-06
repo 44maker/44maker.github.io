@@ -532,14 +532,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-04
+                    2022-05-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    785
+                    727
                 </div>
                 
 
@@ -579,22 +579,31 @@
 </ol>
 <p><strong>法二</strong></p>
 <p>首先需要安装brew</p>
-<p>/bin/zsh -c “$(curl -fsSL <a target="_blank" rel="noopener" href="https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;">https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"</a><br>这里选的是国内的镜像，清华大学的资源。在此表示一下感谢，毕竟国外的不稳定，没法闹。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/bin/zsh -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这里选的是国内的镜像，清华大学的资源。</p>
 <p>2.使用brew安装MySQL</p>
-<p>brew install mysql</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>安装的路径：</p>
 <p>使用HomeBrew安装为/usr/local/var/mysql<br>使用命令查看执行程序路径：</p>
-<p>which mysql</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">which</span> mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>数据路径一般存储在var目录，而不是bin，bin下是可执行程序的文件。</p>
 <p>3.mysql的root密码重置</p>
 <p>根据安装的日志提示启动mysql</p>
-<p>brew services start mysql<br>==&gt; Successfully started <code>mysql</code> (label: homebrew.mxcl.mysql)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew services start mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>进入mysql，并重置密码</p>
-<p>mysql -uroot<br>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘123456’;<br>4.刷新权限</p>
-<p>flush privileges;<br>5.重启mysql</p>
-<p>brew services stop mysql</p>
-<p>==&gt; Successfully stopped <code>mysql</code> (label: homebrew.mxcl.mysql)<br>brew services start mysql<br>==&gt; Successfully started <code>mysql</code> (label: homebrew.mxcl.mysql)<br>以上两个命令等同于</p>
-<p>brew services restart mysql<br>6.其他</p>
+<pre class="line-numbers language-none"><code class="language-none">mysql -uroot
+ALTER USER 'root'@'localhost' IDENTIFIED BY '新的密码';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>4.刷新权限</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">flush privileges<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5.重启mysql</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew services restart mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>连接数据库语句 :</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql <span class="token operator">-</span>h 服务器主机地址 <span class="token operator">-</span>u 用户名 <span class="token operator">-</span>p用户密码<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
