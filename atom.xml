@@ -6,7 +6,7 @@
   <link href="https://44maker.github.io/atom.xml" rel="self"/>
   
   <link href="https://44maker.github.io/"/>
-  <updated>2022-05-06T07:41:33.104Z</updated>
+  <updated>2022-05-06T07:58:08.562Z</updated>
   <id>https://44maker.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://44maker.github.io/2022/05/06/%E7%88%AC%E5%8F%96%E6%8A%96%E9%9F%B3%E6%97%A0%E6%B0%B4%E5%8D%B0%E8%A7%86%E9%A2%91/"/>
     <id>https://44maker.github.io/2022/05/06/%E7%88%AC%E5%8F%96%E6%8A%96%E9%9F%B3%E6%97%A0%E6%B0%B4%E5%8D%B0%E8%A7%86%E9%A2%91/</id>
     <published>2022-05-06T06:27:40.000Z</published>
-    <updated>2022-05-06T07:41:33.104Z</updated>
+    <updated>2022-05-06T07:58:08.562Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/"/>
     <id>https://44maker.github.io/2022/05/05/Kali-Alfa-%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85/</id>
     <published>2022-05-05T02:14:06.000Z</published>
-    <updated>2022-05-05T02:21:08.798Z</updated>
+    <updated>2022-05-06T07:55:10.775Z</updated>
     
     
       
@@ -60,6 +60,8 @@
       
     
     
+    
+    <category term="Kali" scheme="https://44maker.github.io/categories/Kali/"/>
     
     
     <category term="环境配置" scheme="https://44maker.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>

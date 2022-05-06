@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="爬取抖音无水印视频, 44maker">
-    <meta name="description" content="抖音爬取视频常常带有字幕，所以研究了一种方法可以爬取无水印的视频，仅供学习研究请勿传播！">
+    <meta name="description" content="抖音视频有水印，研究了一种方法可以获取无水印视频，仅供学习研究请勿传播！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,9 +32,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0">
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
 </head>
 
 
@@ -570,18 +570,19 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="爬取抖音无水印视频"><a href="#爬取抖音无水印视频" class="headerlink" title="爬取抖音无水印视频"></a>爬取抖音无水印视频</h2><h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h3><p>随便打开一个抖音个人主页，我选择的是爱奇艺体育,接着右键检查网页元素，点击network选项卡下的xhr选项，分析抓到的包</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLEJUpRr4GSVWp2aanj06lzRVA4eicudWIUXxYjcRkIUuiblnTPAOM4QeA/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="cover"></p>
+<img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLEJUpRr4GSVWp2aanj06lzRVA4eicudWIUXxYjcRkIUuiblnTPAOM4QeA/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" title="" alt="cover" data-align="inline">
+
 <p>点到preview选项卡，点击video-&gt;download_addr-&gt;url_list</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLIEsVTUnoO1MibZVbibicftP9kic8ZpyzITncRnhv8n2yYuWI4hn29icMy8Q/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="cover2"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLIEsVTUnoO1MibZVbibicftP9kic8ZpyzITncRnhv8n2yYuWI4hn29icMy8Q/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
 <p>发现这下面跟着的两个网址正好是视频的网址（根本不需要构造，只是这个网址藏的有点深，需要非常耐心的寻找），打开网址查看：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLxKk0FFhyfjscw7ZPVIt6kukKJHZxnuRk9YK5NtIUnXfw6AaMGObLlw/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="cover3"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLxKk0FFhyfjscw7ZPVIt6kukKJHZxnuRk9YK5NtIUnXfw6AaMGObLlw/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
 <p>接着往下看，在下面的play_addr下面也有一个链接，这个链接下面的视频就是无水印版本的视频</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLc3mtpw7MRu7H0oaUXP4lMg5GV8j4jgGewiaG8kMZZibseAC7TR75KZFw/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="image1"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ULibHgXIt3jxaBViaY3BGQX77vAvTrGpyLc3mtpw7MRu7H0oaUXP4lMg5GV8j4jgGewiaG8kMZZibseAC7TR75KZFw/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1"></p>
 <p>ok，现在我们只要想办法提取到它就大功告成了</p>
 <p>我这次使用的方法中用到了jsonpath模块，直接pip下载就可以了：</p>
 <pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">pip install jsonpath<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://p0.meituan.net/csc/82a1e8e1e98bf19babce9d49c685575d73541.png" alt="power1"></p>
+<p><img src="https://p0.meituan.net/csc/82a1e8e1e98bf19babce9d49c685575d73541.png"></p>
 <h3 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码"></a>2.代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
 <span class="token keyword">import</span> json
 <span class="token keyword">import</span> jsonpath
@@ -624,9 +625,7 @@
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
      douyin <span class="token operator">=</span> Douyin<span class="token punctuation">(</span><span class="token punctuation">)</span>
-     douyin<span class="token punctuation">.</span>page_num<span class="token punctuation">(</span>max_cursor<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+     douyin<span class="token punctuation">.</span>page_num<span class="token punctuation">(</span>max_cursor<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-优点"><a href="#3-优点" class="headerlink" title="3.优点"></a>3.优点</h3><p>这个方法的优点是可以省去很大一部分的分析网址的步骤，而且没有调用到webdriver（可以不限制浏览器），速度也会有显著提升,得到的视频也是无水印的</p>
 <h3 id="4-不足"><a href="#4-不足" class="headerlink" title="4. 不足"></a>4. 不足</h3><p>还是没有解决随机生成字符串的问题，操作比较麻烦</p>
@@ -889,7 +888,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            抖音爬取视频常常带有字幕，所以研究了一种方法可以爬取无水印的视频，仅供学习研究请勿传播！
+                            抖音视频有水印，研究了一种方法可以获取无水印视频，仅供学习研究请勿传播！
                         
                     </div>
                     <div class="publish-info">
@@ -951,8 +950,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            44maker
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Kali/" class="post-category">
+                                    Kali
+                                </a>
+                            
                             
                         </span>
                     </div>
