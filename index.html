@@ -32,9 +32,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0">
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
 </head>
 
 
@@ -662,12 +662,15 @@
 <div class="video-player">
     
     <div class="title center-align">
-        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;每日视频
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;新蝙蝠侠
     </div>
     
     <div class="row">
 		
-			<iframe src='https://www.youtube.com/embed/SsEYAh7ALxY' scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" align="middle"  style="height: 400px;" width="100%"> </iframe>
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                     style="height: 400px;"></div>
+        </div>
 		
     </div>
 </div>
@@ -684,7 +687,7 @@
             preload: 'auto',
             volume: Number('0.7'),
             video: {
-                url: '',
+                url: 'https://v3-default.ixigua.com/ce83e6b9f9330169cf1afb5ffdd3bdfc/6274b79f/video/tos/cn/tos-cn-v-6f4170/f376d54d23b348e58e1e8c1d00a3e19b/?libvio.cc&filename=1.mp4',
                 pic: '',
                 thumbnails: ''
             }
