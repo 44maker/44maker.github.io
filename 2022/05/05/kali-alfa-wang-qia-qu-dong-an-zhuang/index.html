@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="44maker">
-    <meta name="description" content="44maker">
+    <meta name="keywords" content="Kali Alfa 网卡驱动安装, 44maker">
+    <meta name="description" content="有些外置网卡kali是不能即插即用的，所以需要安装驱动">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>44maker</title>
+    <title>Kali Alfa 网卡驱动安装 | 44maker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -32,14 +32,14 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.1.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="44maker" type="application/atom+xml">
 </head>
 
 
-<body>
-    <header class="navbar-fixed">
+    <body>
+        <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -128,11 +128,11 @@
       </li>
       
       <li>
-        <a href="/galleries">
+        <a href="/apps">
           
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-cubes" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>画廊</span>
+          <span>软件</span>
         </a>
       </li>
       
@@ -240,11 +240,11 @@
               
                 <li>
 
-                  <a href="/galleries " style="margin-left:75px">
+                  <a href="/apps " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-cubes" style="position: absolute;left:50px" ></i>
 			      
-		          <span>画廊</span>
+		          <span>软件</span>
                   </a>
                 </li>
               
@@ -327,16 +327,16 @@
 
 </header>
 
-    
+            
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.bmp.ovh/imgs/2022/05/04/12dfdcb7b04426d3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Kali Alfa 网卡驱动安装</h1>
                 </div>
             </div>
         </div>
@@ -346,116 +346,39 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">环境配置</span>
+                            </a>
+                        
+                            <a href="/tags/Kali/">
+                                <span class="chip bg-color">Kali</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Kali/" class="post-category">
+                                Kali
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -464,7 +387,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-06
+                    2022-05-05
                 </div>
                 
 
@@ -478,7 +401,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    131
                 </div>
                 
 
@@ -508,7 +431,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Kali-Alfa-网卡驱动安装"><a href="#Kali-Alfa-网卡驱动安装" class="headerlink" title="Kali Alfa 网卡驱动安装"></a><strong>Kali Alfa 网卡驱动安装</strong></h1><p>我使用的网卡是ALFA的AWUS036ACH</p>
+<p>默认Kali是不支持的，需要安装驱动</p>
+<p>首先进入终端更新一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt update
+sudo apt upgrade <span class="token operator">-</span>y
+sudo apt dist-upgrade <span class="token operator">-</span>y
+sudo reboot now<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后开始安装驱动</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo apt install realtek-rtl88xxau-dkms
+sudo apt install dkms
+git clone <span class="token punctuation">[</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com/aircrack-ng/rtl8812au&gt;<span class="token punctuation">]</span><span class="token punctuation">(</span>&lt;https:<span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>youtube<span class="token punctuation">.</span>com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGZ6ZU5wMy1uZlQtVElJMVZJT3ozZEJ2a3ctQXxBQ3Jtc0tuNWloV1dPVVJ6bEdqSFdfd2V1c2hwMVl5UnZlR2p1TXhycVl1WW1sZ1NXbVl5UjN1UFhoY0ZuVTdFdXFfanBSUk5UaHNNNXZsQ0Fwcm5vRzRuaXlIOGZyMy1Tb1pKZV9aVU9qOU1xWlRGbExTOFF3bw&amp;q=https%3A%2F%2Fgithub<span class="token punctuation">.</span>com%2Faircrack-ng%2Frtl8812au&amp;v=hEXwOkyYNL0&gt;<span class="token punctuation">)</span>
+cd rtl8812au/
+make
+sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>检查一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">lsusb
+iwconfig<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>完成之后测试一下</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">sudo wifite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -534,7 +479,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://44maker.github.io/books/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.html">https://44maker.github.io/books/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.html</a>
+                    <a href="https://44maker.github.io/2022/05/05/kali-alfa-wang-qia-qu-dong-an-zhuang/">https://44maker.github.io/2022/05/05/kali-alfa-wang-qia-qu-dong-an-zhuang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,7 +516,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
+                                <a href="/tags/Kali/">
+                                    <span class="chip bg-color">Kali</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -743,39 +696,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/books/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.html">
+                <a href="/2022/05/06/pa-qu-dou-yin-wu-shui-yin-shi-pin/">
                     <div class="card-image">
                         
+                        <img src="https://s1.ax1x.com/2022/05/06/OuQbfP.jpg" class="responsive-img" alt="爬取抖音无水印视频">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">爬取抖音无水印视频</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            抖音视频有水印，研究了一种方法可以获取无水印视频，仅供学习研究请勿传播！
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            44maker
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
+                    </a>
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -783,37 +749,51 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/books/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91.html">
+                <a href="/2022/05/04/solidity-xue-xi-ji-lu/">
                     <div class="card-image">
                         
+                        <img src="https://s1.ax1x.com/2022/05/04/OVybl9.jpg" class="responsive-img" alt="Solidity学习记录">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Solidity学习记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            2018年起区块链大热，所以喜欢新鲜事物的我向着Web3.0出发！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            44maker
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Solidity/" class="post-category">
+                                    Solidity
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">学习记录</span>
+                    </a>
+                    
+                    <a href="/tags/Solidity/">
+                        <span class="chip bg-color">Solidity</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -878,87 +858,6 @@
 <!-- 代码块收缩 -->
 
 
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
     
 
 </main>
@@ -966,7 +865,7 @@
 
 
 
-    <footer class="page-footer bg-color">
+                <footer class="page-footer bg-color">
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -1104,7 +1003,7 @@
 
 <div class="progress-bar"></div>
 
-    <!-- 搜索遮罩框 -->
+                    <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
@@ -1208,7 +1107,7 @@ $(function () {
 });
 </script>
 
-    <!-- 回到顶部按钮 -->
+                        <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
@@ -1216,32 +1115,37 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+                            <script src="/libs/materialize/materialize.min.js"></script>
+                            <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+                            <script src="/libs/aos/aos.js"></script>
+                            <script
+                                src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                            <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                            <script src="/js/matery.js"></script>
 
-    
+                            
 
-    
+                                    
 
-    <!-- 雪花特效 -->
-    
+                                            <!-- 雪花特效 -->
+                                            
 
-    <!-- 鼠标星星特效 -->
-    
+                                                    <!-- 鼠标星星特效 -->
+                                                    
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
-    
+                                                            
+                                                                <script
+                                                                    src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+                                                                <script
+                                                                    src="/libs/others/TencentCaptcha.js"></script>
+                                                                <button id="TencentCaptcha"
+                                                                    data-appid="xxxxxxxxxx"
+                                                                    data-cbfn="callback" type="button" hidden></button>
+                                                                
 
-    <!-- Baidu Analytics -->
+                                                                    <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
+                                                                        <!-- Baidu Push -->
 
 <script>
     (function () {
@@ -1257,27 +1161,30 @@ $(function () {
     })();
 </script>
 
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+                                                                            
+                                                                                    
+                                                                                        <script async
+                                                                                            src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                                                        
 
-    
+                                                                                            
 
-    
+                                                                                                    
 
-    <!--腾讯兔小巢-->
-    
-    
+                                                                                                            <!--腾讯兔小巢-->
+                                                                                                            
+                                                                                                                    
 
-    
+                                                                                                                            
 
-    
+                                                                                                                                        
 
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+                                                                                                                                                
+                                                                                                                                                    <script
+                                                                                                                                                        src="/libs/instantpage/instantpage.js"
+                                                                                                                                                        type="module"></script>
+                                                                                                                                                    
 
-</body>
+    </body>
 
 </html>
