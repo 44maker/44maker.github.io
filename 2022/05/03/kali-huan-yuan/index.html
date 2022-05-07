@@ -90,6 +90,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/tools" class="waves-effect waves-light">
+      
+      <i class="fas fa-gavel" style="zoom: 0.6;"></i>
+      
+      <span>百宝箱</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="" class="waves-effect waves-light">
 
       
@@ -193,6 +204,17 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tools" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-gavel"></i>
+			
+			百宝箱
 		</a>
           
         </li>
@@ -1194,7 +1216,13 @@ $(function () {
                                                                                                                                                         src="/libs/instantpage/instantpage.js"
                                                                                                                                                         type="module"></script>
                                                                                                                                                     
-
+                                                                                                                                                        <script
+                                                                                                                                                            type="text/javascript">
+                                                                                                                                                                var OriginTitile = document.title, st;
+                                                                                                                                                                document.addEventListener("visibilitychange", function () {
+                                                                                                                                                                    document.hidden ? (document.title = "别走啊~快回来", clearTimeout(st)) : (document.title = "(Ő∀Ő3)ノ好哦！", st = setTimeout(function () { document.title = OriginTitile }, 3e3))
+                                                                                                                                                                })
+                                                                                                                                                            </script>
     </body>
 
 </html>
