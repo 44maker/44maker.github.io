@@ -20,7 +20,7 @@
     
 
     <title>Mac指南 | 44maker</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -416,7 +416,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    518
+                    516
                 </div>
                 
 
@@ -446,30 +446,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id=""><a href="#" class="headerlink" title=""></a><img src="https://media.macosicons.com/parse/files/macOSicons/507d55df4141ac37f579d2f157603a72_low_res_Apple.png" title="" alt="" width="101"></h1><h1 id="Mac配置"><a href="#Mac配置" class="headerlink" title="Mac配置"></a>Mac配置</h1><p><strong>取消 4 位数密码限制</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pwpolicy -clearaccountpolicies<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Mac配置"><a href="#Mac配置" class="headerlink" title="Mac配置"></a>Mac配置</h1><h2 id="取消-4-位数密码限制"><a href="#取消-4-位数密码限制" class="headerlink" title="取消 4 位数密码限制"></a><strong>取消 4 位数密码限制</strong></h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pwpolicy -clearaccountpolicies<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>更改密码</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">passwd</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>允许安装任意来源的 App</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> spctl --master-disable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="允许安装任意来源的-App"><a href="#允许安装任意来源的-App" class="headerlink" title="允许安装任意来源的 App"></a><strong>允许安装任意来源的 App</strong></h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> spctl --master-disable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后前往系统偏好设置—&gt;安全性与隐私—&gt;点击左下角的小锁</p>
 <p>然后下面的这个任何来源的隐藏选项就出现啦：</p>
 <p><img src="https://image.3001.net/images/20220123/16429464344952.png" alt="https://image.3001.net/images/20220123/16429464344952.png"></p>
-<p><strong>修改主机名和共享名称</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> scutil --set HostName <span class="token punctuation">{</span>44maker<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="修改主机名和共享名称"><a href="#修改主机名和共享名称" class="headerlink" title="修改主机名和共享名称"></a><strong>修改主机名和共享名称</strong></h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> scutil --set HostName <span class="token punctuation">{</span>44maker<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>同样也可以修改共享电脑名称，使用如下命令：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> scutil --set ComputerName <span class="token punctuation">{</span>44maker<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>安装 Xcode Command Line Tools</strong></p>
-<p>Command Line Tools 是在 Xcode 中的一款工具，macOS 下不少开发工具都会依赖这个，所以我们手动安装一下，后面安装其他工具可以省下不少麻烦：</p>
+<h2 id="安装-Xcode-Command-Line-Tools"><a href="#安装-Xcode-Command-Line-Tools" class="headerlink" title="安装 Xcode Command Line Tools"></a><strong>安装 Xcode Command Line Tools</strong></h2><p>Command Line Tools 是在 Xcode 中的一款工具，macOS 下不少开发工具都会依赖这个，所以我们手动安装一下，后面安装其他工具可以省下不少麻烦：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">xcode-select --install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><strong>触控优化</strong></p>
-<p>MBP 上使用触控板或者台式机外接妙控板进行鼠标指针拖移的话，默认得按压下去才可以拖动窗口，长时候按压难免让手指更加酸痛而且效率不高，这个时候在「辅助功能」-「指针控制」-「鼠标与触控板」开启传说中的「三指拖移」：</p>
+<h2 id="触控优化"><a href="#触控优化" class="headerlink" title="触控优化"></a><strong>触控优化</strong></h2><p>MBP 上使用触控板或者台式机外接妙控板进行鼠标指针拖移的话，默认得按压下去才可以拖动窗口，长时候按压难免让手指更加酸痛而且效率不高，这个时候在「辅助功能」-「指针控制」-「鼠标与触控板」开启传说中的「三指拖移」：</p>
 <p><img src="https://image.3001.net/images/20220123/16429481876887.png" alt="https://image.3001.net/images/20220123/16429481876887.png"></p>
 <h2 id="光标响应"><a href="#光标响应" class="headerlink" title="光标响应"></a><strong>光标响应</strong></h2><p><img src="https://image.3001.net/images/20220123/1642948419864.png" alt="https://image.3001.net/images/20220123/1642948419864.png"></p>
 <h2 id="关闭-SIP（如果不需要尽量不要关！！！）"><a href="#关闭-SIP（如果不需要尽量不要关！！！）" class="headerlink" title="关闭 SIP（如果不需要尽量不要关！！！）"></a><strong>关闭 SIP（如果不需要尽量不要关！！！）</strong></h2><p>有些软件需要关闭 SIP 才可以实用，比如&nbsp;<code>proxychains-ng</code>&nbsp;这种系统级代理软件</p>
